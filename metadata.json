@@ -1,0 +1,6 @@
+{
+  "name": "StyleAtlas 前端设计风格图鉴",
+  "description": "面向个人前端开发的 Tailwind CSS 设计风格百科全书与交互式页面样例工作台，涵盖 12 大主流设计流派、设计规范及 36 个可交互页面级源码样例。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

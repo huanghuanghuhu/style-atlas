@@ -1,6 +1,6 @@
 {
-  "summary":  "新增桌面 (100%) / 平板 (768px) / 手机 (390px) 三档视口切换器，并将全部 48 套页面样例的响应式断点升级为 Tailwind v4 @container 容器查询，实现任意视口档位下的真实流式折行与极简尺寸标尺展示。",
-  "updatedAt":  "2026-11-07T07:14:40.980505096Z",
+  "summary":  "在项目根目录创建简洁清晰的 README.md，包含线上访问链接 https://huanghuanghuhu.github.io/style-atlas/、16 大前端设计流派概览、核心功能说明与本地运行命令。",
+  "updatedAt":  "2026-11-07T07:53:16.400215159Z",
   "requestFeedback":  true,
   "userFacing":  true
 }

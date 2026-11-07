@@ -27,11 +27,11 @@ export const NeoBrutalismExamples: React.FC<ExampleProps> = ({ exampleId }) => {
   if (exampleId === 'landing') {
     const estimatedMonthly = audienceCount * 14;
     return (
-      <div className="bg-[#FFFDF5] text-black border-2 border-black p-6 md:p-8 space-y-8">
+      <div className="bg-[#FFFDF5] text-black border-2 border-black p-6 @md:p-8 space-y-8">
         {/* Top Bar Contract */}
         <header className="flex items-center justify-between bg-white border-2 border-black rounded-xl px-5 py-3.5 shadow-[4px_4px_0px_0px_#000000]">
           <span className="font-display font-extrabold text-lg tracking-tight">GUMDROP.WORK</span>
-          <nav className="hidden sm:flex items-center gap-6 text-xs font-bold">
+          <nav className="hidden @sm:flex items-center gap-6 text-xs font-bold">
             <a href="#packs" onClick={(e) => e.preventDefault()} className="hover:underline">Asset Packs</a>
             <a href="#creators" onClick={(e) => e.preventDefault()} className="hover:underline">Creators</a>
             <a href="#fees" onClick={(e) => e.preventDefault()} className="hover:underline">Zero Monthly Fee</a>
@@ -42,13 +42,13 @@ export const NeoBrutalismExamples: React.FC<ExampleProps> = ({ exampleId }) => {
         </header>
 
         {/* Hero Split */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
-          <div className="lg:col-span-7 bg-[#FFDE59] border-2 border-black rounded-2xl p-8 shadow-[6px_6px_0px_0px_#000000] flex flex-col justify-between">
+        <div className="grid grid-cols-1 @lg:grid-cols-12 gap-6 items-stretch">
+          <div className="@lg:col-span-7 bg-[#FFDE59] border-2 border-black rounded-2xl p-8 shadow-[6px_6px_0px_0px_#000000] flex flex-col justify-between">
             <div>
               <div className="text-xs font-mono font-bold uppercase tracking-wider">
                 CREATOR COMMERCE · 0% PLATFORM LOCK-IN
               </div>
-              <h1 className="font-display text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.02] mt-4">
+              <h1 className="font-display text-4xl @md:text-5xl font-extrabold tracking-tight leading-[1.02] mt-4">
                 Turn your side project into a cash-flowing studio.
               </h1>
               <p className="text-sm font-medium text-neutral-900 mt-4 leading-relaxed max-w-lg">
@@ -66,7 +66,7 @@ export const NeoBrutalismExamples: React.FC<ExampleProps> = ({ exampleId }) => {
           </div>
 
           {/* Interactive Revenue Estimator Box */}
-          <div className="lg:col-span-5 bg-[#6EE7B7] border-2 border-black rounded-2xl p-7 shadow-[6px_6px_0px_0px_#000000] flex flex-col justify-between">
+          <div className="@lg:col-span-5 bg-[#6EE7B7] border-2 border-black rounded-2xl p-7 shadow-[6px_6px_0px_0px_#000000] flex flex-col justify-between">
             <div>
               <span className="font-mono text-xs font-bold uppercase">INTERACTIVE PAYOUT ESTIMATOR</span>
               <h3 className="font-display text-2xl font-extrabold mt-2">Calculate Your Take-Home</h3>
@@ -109,7 +109,7 @@ export const NeoBrutalismExamples: React.FC<ExampleProps> = ({ exampleId }) => {
     return (
       <div className="bg-[#FFFDF5] text-black border-2 border-black p-6 space-y-6">
         {/* 3 Pop KPI Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 @md:grid-cols-3 gap-5">
           <div className="bg-[#FFDE59] border-2 border-black rounded-xl p-5 shadow-[4px_4px_0px_0px_#000000]">
             <div className="font-mono text-xs font-bold">30-DAY NET REVENUE</div>
             <div className="font-mono text-3xl font-extrabold tabular-nums mt-2">$24,890.00</div>
@@ -175,8 +175,8 @@ export const NeoBrutalismExamples: React.FC<ExampleProps> = ({ exampleId }) => {
   const finalTotal = basePrice + customTip;
 
   return (
-    <div className="bg-[#FFFDF5] text-black border-2 border-black p-6 md:p-8 grid grid-cols-1 md:grid-cols-12 gap-6">
-      <div className="md:col-span-7 bg-white border-2 border-black rounded-2xl p-6 shadow-[6px_6px_0px_0px_#000000] space-y-6">
+    <div className="bg-[#FFFDF5] text-black border-2 border-black p-6 @md:p-8 grid grid-cols-1 @md:grid-cols-12 gap-6">
+      <div className="@md:col-span-7 bg-white border-2 border-black rounded-2xl p-6 shadow-[6px_6px_0px_0px_#000000] space-y-6">
         <div>
           <span className="font-mono text-xs font-bold bg-[#FFDE59] px-2 py-0.5 border border-black">INSTANT ZIP + FIGMA SOURCE</span>
           <h2 className="font-display text-2xl font-extrabold mt-2">Neo-Brutalist Design System v4.0</h2>
@@ -232,7 +232,7 @@ export const NeoBrutalismExamples: React.FC<ExampleProps> = ({ exampleId }) => {
       </div>
 
       {/* Checkout Box */}
-      <div className="md:col-span-5 bg-[#FFDE59] border-2 border-black rounded-2xl p-6 shadow-[6px_6px_0px_0px_#000000] flex flex-col justify-between">
+      <div className="@md:col-span-5 bg-[#FFDE59] border-2 border-black rounded-2xl p-6 shadow-[6px_6px_0px_0px_#000000] flex flex-col justify-between">
         <div className="space-y-4">
           <h3 className="font-display text-xl font-extrabold border-b-2 border-black pb-3">Order Receipt</h3>
           <div className="flex justify-between text-xs font-bold">
@@ -273,17 +273,17 @@ export const EditorialSerifExamples: React.FC<ExampleProps> = ({ exampleId }) =>
 
   if (exampleId === 'landing') {
     return (
-      <div className="bg-[#FAF7F2] text-[#1C1917] p-8 md:p-12 border border-stone-300">
+      <div className="bg-[#FAF7F2] text-[#1C1917] p-8 @md:p-12 border border-stone-300">
         {/* Broadsheet Masthead */}
         <header className="border-b border-stone-800 pb-6">
           <div className="flex items-center justify-between text-xs text-stone-500 border-b border-stone-300 pb-3 mb-6">
             <span>VOLUME XIV · AUTUMN / WINTER MONOGRAPH</span>
-            <span className="hidden sm:inline">ZÜRICH · KYOTO · ANTWERP</span>
+            <span className="hidden @sm:inline">ZÜRICH · KYOTO · ANTWERP</span>
             <span>ISSN 2049-8821</span>
           </div>
           <div className="flex items-center justify-between">
             <span className="font-serif-editorial text-2xl tracking-tight">L’ATELIER DU NORD</span>
-            <nav className="hidden md:flex items-center gap-8 text-xs tracking-wider uppercase text-stone-600">
+            <nav className="hidden @md:flex items-center gap-8 text-xs tracking-wider uppercase text-stone-600">
               <a href="#essays" onClick={(e) => e.preventDefault()} className="hover:text-[#1C1917]">Essays</a>
               <a href="#objects" onClick={(e) => e.preventDefault()} className="hover:text-[#1C1917]">Tactile Objects</a>
               <a href="#residencies" onClick={(e) => e.preventDefault()} className="hover:text-[#1C1917]">Residencies</a>
@@ -299,7 +299,7 @@ export const EditorialSerifExamples: React.FC<ExampleProps> = ({ exampleId }) =>
           <div className="text-xs tracking-widest uppercase text-[#7C2D12] mb-4">
             FEATURED ESSAY · BY SOREN KIERKEGAARD II
           </div>
-          <h1 className="font-serif-editorial text-4xl md:text-6xl font-normal leading-[1.08] tracking-tight text-[#1C1917]">
+          <h1 className="font-serif-editorial text-4xl @md:text-6xl font-normal leading-[1.08] tracking-tight text-[#1C1917]">
             In Praise of <span className="italic">Unfinished</span> Timber and Silent Rooms.
           </h1>
           <p className="text-sm text-stone-600 mt-6 leading-[1.8] max-w-xl mx-auto">
@@ -315,7 +315,7 @@ export const EditorialSerifExamples: React.FC<ExampleProps> = ({ exampleId }) =>
         </section>
 
         {/* 3-Column Broadsheet Articles */}
-        <section className="pt-8 grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-stone-300">
+        <section className="pt-8 grid grid-cols-1 @md:grid-cols-3 gap-8 divide-y @md:divide-y-0 @md:divide-x divide-stone-300">
           {[
             {
               no: '01',
@@ -336,7 +336,7 @@ export const EditorialSerifExamples: React.FC<ExampleProps> = ({ exampleId }) =>
               author: 'H. Lindqvist',
             },
           ].map((art, i) => (
-            <article key={art.no} className={i > 0 ? 'pt-6 md:pt-0 md:pl-8' : ''}>
+            <article key={art.no} className={i > 0 ? 'pt-6 @md:pt-0 @md:pl-8' : ''}>
               <span className="font-mono text-xs text-[#7C2D12]">CHAPTER {art.no}</span>
               <h3 className="font-serif-editorial text-2xl mt-2 leading-snug">{art.title}</h3>
               <p className="text-xs text-stone-600 mt-3 leading-relaxed">{art.excerpt}</p>
@@ -404,8 +404,8 @@ export const EditorialSerifExamples: React.FC<ExampleProps> = ({ exampleId }) =>
   };
 
   return (
-    <div className="bg-[#FAF7F2] text-[#1C1917] p-8 border border-stone-300 grid grid-cols-1 md:grid-cols-12 gap-8">
-      <div className="md:col-span-7 space-y-6">
+    <div className="bg-[#FAF7F2] text-[#1C1917] p-8 border border-stone-300 grid grid-cols-1 @md:grid-cols-12 gap-8">
+      <div className="@md:col-span-7 space-y-6">
         <div>
           <span className="text-xs tracking-widest uppercase text-[#7C2D12]">BESPOKE APOTHECARY COMMISSION</span>
           <h2 className="font-serif-editorial text-3xl mt-1">Eau de Parfum · 100ml Amber Glass</h2>
@@ -462,7 +462,7 @@ export const EditorialSerifExamples: React.FC<ExampleProps> = ({ exampleId }) =>
       </div>
 
       {/* Live Apothecary Bottle Label Preview */}
-      <div className="md:col-span-5 bg-[#F2ECE1] p-8 border border-stone-300 flex flex-col justify-between">
+      <div className="@md:col-span-5 bg-[#F2ECE1] p-8 border border-stone-300 flex flex-col justify-between">
         <div className="bg-[#FAF7F2] border border-stone-400 p-6 text-center space-y-4 shadow-2xs">
           <div className="text-[10px] tracking-widest uppercase text-stone-500">L’ATELIER DU NORD · ZÜRICH</div>
           <div className="border-y border-stone-300 py-4">
@@ -531,7 +531,7 @@ export const SpatialGlassExamples: React.FC<ExampleProps> = ({ exampleId }) => {
             <div className="text-xs text-sky-300 font-medium tracking-wider uppercase">
               OPTICAL DEPTH COMPUTING · VISION INTERFACE
             </div>
-            <h1 className="font-display text-4xl md:text-5xl font-semibold tracking-tight mt-2 leading-[1.1]">
+            <h1 className="font-display text-4xl @md:text-5xl font-semibold tracking-tight mt-2 leading-[1.1]">
               Interfaces that breathe with ambient light.
             </h1>
             <p className="text-sm text-white/75 mt-4 leading-relaxed">
@@ -539,7 +539,7 @@ export const SpatialGlassExamples: React.FC<ExampleProps> = ({ exampleId }) => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 @md:grid-cols-3 gap-4">
             {[
               { title: 'Dynamic Specular Rims', sub: '1px top inset refraction responds to gaze angle' },
               { title: 'Acoustic Ray Tracing', sub: 'Head-tracked 360° spatial soundstage' },
@@ -561,12 +561,12 @@ export const SpatialGlassExamples: React.FC<ExampleProps> = ({ exampleId }) => {
 
   if (exampleId === 'dashboard') {
     return (
-      <div className="relative bg-[#070A17] text-white p-6 rounded-[32px] overflow-hidden flex flex-col md:flex-row gap-4">
+      <div className="relative bg-[#070A17] text-white p-6 rounded-[32px] overflow-hidden flex flex-col @md:flex-row gap-4">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-indigo-500/30 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-cyan-400/25 rounded-full blur-3xl pointer-events-none" />
 
         {/* Floating Spatial Dock */}
-        <aside className="relative md:w-52 bg-white/[0.10] backdrop-blur-2xl border border-white/20 rounded-[24px] p-4 flex flex-col justify-between shadow-[inset_0_1px_1px_rgba(255,255,255,0.3)]">
+        <aside className="relative @md:w-52 bg-white/[0.10] backdrop-blur-2xl border border-white/20 rounded-[24px] p-4 flex flex-col justify-between shadow-[inset_0_1px_1px_rgba(255,255,255,0.3)]">
           <div className="space-y-1">
             <div className="px-3 py-2 text-[11px] font-mono text-white/50">SPATIAL ENVIRONMENTS</div>
             {['Nordic Fjord Dawn', 'Deep Orbit Station', 'Kyoto Moss Rain', 'Solar Observatory'].map((env, i) => (

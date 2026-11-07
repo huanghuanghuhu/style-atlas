@@ -33,11 +33,11 @@ export const FlatDesignExamples: React.FC<ExampleProps> = ({ exampleId }) => {
 
   if (exampleId === 'landing') {
     return (
-      <div className="bg-slate-50 text-slate-900 p-6 md:p-8 border border-slate-200 rounded-xl space-y-8">
+      <div className="bg-slate-50 text-slate-900 p-6 @md:p-8 border border-slate-200 rounded-xl space-y-8">
         {/* Flat Navigation */}
         <header className="flex items-center justify-between bg-white px-5 py-3.5 rounded-lg border border-slate-200">
           <span className="font-display font-bold text-base text-slate-900">DocuFlat</span>
-          <nav className="hidden sm:flex gap-6 text-xs font-medium text-slate-600">
+          <nav className="hidden @sm:flex gap-6 text-xs font-medium text-slate-600">
             <a href="#wiki" onClick={(e) => e.preventDefault()} className="hover:text-blue-600">Knowledge Base</a>
             <a href="#tasks" onClick={(e) => e.preventDefault()} className="hover:text-blue-600">Sprint Boards</a>
             <a href="#api" onClick={(e) => e.preventDefault()} className="hover:text-blue-600">REST API</a>
@@ -48,12 +48,12 @@ export const FlatDesignExamples: React.FC<ExampleProps> = ({ exampleId }) => {
         </header>
 
         {/* Flat Hero */}
-        <div className="bg-white p-8 rounded-lg border border-slate-200 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          <div className="lg:col-span-7 space-y-4">
+        <div className="bg-white p-8 rounded-lg border border-slate-200 grid grid-cols-1 @lg:grid-cols-12 gap-8 items-center">
+          <div className="@lg:col-span-7 space-y-4">
             <div className="text-xs font-semibold text-blue-600 uppercase tracking-wider">
               FLAT 2.0 ARCHITECTURE · ZERO VISUAL BLOAT
             </div>
-            <h1 className="font-display text-3xl md:text-4xl font-bold text-slate-900 tracking-tight leading-tight">
+            <h1 className="font-display text-3xl @md:text-4xl font-bold text-slate-900 tracking-tight leading-tight">
               Clear hierarchy through solid color blocks and clean geometry.
             </h1>
             <p className="text-sm text-slate-600 leading-relaxed">
@@ -70,7 +70,7 @@ export const FlatDesignExamples: React.FC<ExampleProps> = ({ exampleId }) => {
           </div>
 
           {/* Solid Color Feature Blocks */}
-          <div className="lg:col-span-5 grid grid-cols-2 gap-3">
+          <div className="@lg:col-span-5 grid grid-cols-2 gap-3">
             <div className="p-4 rounded-lg bg-blue-600 text-white">
               <FileText className="w-5 h-5 mb-3" />
               <div className="font-bold text-sm">Instant Docs</div>
@@ -103,7 +103,7 @@ export const FlatDesignExamples: React.FC<ExampleProps> = ({ exampleId }) => {
 
     return (
       <div className="bg-slate-50 text-slate-900 p-6 border border-slate-200 rounded-xl space-y-5">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 @md:grid-cols-3 gap-4">
           <div className="bg-white p-5 rounded-lg border border-slate-200">
             <div className="text-xs text-slate-500 font-medium">Total Active Users</div>
             <div className="text-3xl font-bold text-slate-900 mt-1 tabular-nums">12,480</div>
@@ -258,7 +258,7 @@ export const MaterialDesignExamples: React.FC<ExampleProps> = ({ exampleId }) =>
 
   if (exampleId === 'landing') {
     return (
-      <div className={`${p.surface} text-[#1D1B20] p-6 md:p-8 rounded-[32px] space-y-6 transition-colors`}>
+      <div className={`${p.surface} text-[#1D1B20] p-6 @md:p-8 rounded-[32px] space-y-6 transition-colors`}>
         {/* M3 Top Bar with Dynamic Seed Color Picker */}
         <header className="flex flex-wrap items-center justify-between gap-4">
           <span className="font-display font-medium text-lg tracking-tight">Material You Studio</span>
@@ -279,12 +279,12 @@ export const MaterialDesignExamples: React.FC<ExampleProps> = ({ exampleId }) =>
         </header>
 
         {/* M3 Tonal Hero Container (Zero Border, Pure Tonal Surface) */}
-        <div className={`${p.container} rounded-[28px] p-8 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center transition-colors`}>
-          <div className="lg:col-span-8 space-y-4">
+        <div className={`${p.container} rounded-[28px] p-8 grid grid-cols-1 @lg:grid-cols-12 gap-6 items-center transition-colors`}>
+          <div className="@lg:col-span-8 space-y-4">
             <span className={`text-xs font-semibold uppercase tracking-wider ${p.primaryText}`}>
               GOOGLE MATERIAL DESIGN 3 · TONAL PALETTE SYSTEM
             </span>
-            <h1 className="font-display text-3xl md:text-5xl font-normal tracking-tight leading-[1.12]">
+            <h1 className="font-display text-3xl @md:text-5xl font-normal tracking-tight leading-[1.12]">
               Personal, adaptive interfaces built on tonal elevation.
             </h1>
             <p className="text-sm text-[#49454F] max-w-xl leading-relaxed">
@@ -301,7 +301,7 @@ export const MaterialDesignExamples: React.FC<ExampleProps> = ({ exampleId }) =>
           </div>
 
           {/* Extended FAB Preview Card */}
-          <div className="lg:col-span-4 bg-white rounded-3xl p-6 shadow-xs flex flex-col justify-between space-y-6">
+          <div className="@lg:col-span-4 bg-white rounded-3xl p-6 shadow-xs flex flex-col justify-between space-y-6">
             <div>
               <div className="text-xs text-[#49454F]">PRIMARY ELEVATED AFFORDANCE</div>
               <div className="text-base font-medium mt-1">Extended Floating Action Button (FAB)</div>
@@ -318,9 +318,9 @@ export const MaterialDesignExamples: React.FC<ExampleProps> = ({ exampleId }) =>
 
   if (exampleId === 'dashboard') {
     return (
-      <div className={`${p.surface} text-[#1D1B20] p-6 rounded-[32px] grid grid-cols-1 md:grid-cols-12 gap-5 relative`}>
+      <div className={`${p.surface} text-[#1D1B20] p-6 rounded-[32px] grid grid-cols-1 @md:grid-cols-12 gap-5 relative`}>
         {/* M3 Navigation Drawer with Pill Active Indicator */}
-        <aside className={`md:col-span-4 lg:col-span-3 ${p.container} rounded-3xl p-4 space-y-1.5`}>
+        <aside className={`@md:col-span-4 @lg:col-span-3 ${p.container} rounded-3xl p-4 space-y-1.5`}>
           <button className={`w-full mb-4 py-3.5 px-4 rounded-2xl ${p.fab} font-semibold text-xs shadow-sm flex items-center gap-2 cursor-pointer`}>
             <Plus className="w-4 h-4" />
             <span>New Task</span>
@@ -351,7 +351,7 @@ export const MaterialDesignExamples: React.FC<ExampleProps> = ({ exampleId }) =>
         </aside>
 
         {/* Main Tonal Content List */}
-        <div className="md:col-span-8 lg:col-span-9 space-y-3">
+        <div className="@md:col-span-8 @lg:col-span-9 space-y-3">
           {[
             { sender: 'Material Design Council', title: 'Updated M3 Contrast Tokens for Surface Container High', time: '10:42 AM' },
             { sender: 'Android System UI', title: 'Predictive Back Gesture animation curve verification', time: '09:15 AM' },
@@ -375,7 +375,7 @@ export const MaterialDesignExamples: React.FC<ExampleProps> = ({ exampleId }) =>
 
   // Interactive M3 Filled Text Field & Segmented Control Form
   return (
-    <div className={`${p.surface} text-[#1D1B20] p-6 md:p-8 rounded-[32px]`}>
+    <div className={`${p.surface} text-[#1D1B20] p-6 @md:p-8 rounded-[32px]`}>
       <div className={`max-w-xl mx-auto ${p.container} rounded-[28px] p-7 space-y-6`}>
         <h3 className="text-xl font-normal">Material 3 Filled Form Controls</h3>
 
@@ -426,7 +426,7 @@ export const NeumorphismExamples: React.FC<ExampleProps> = ({ exampleId }) => {
 
   if (exampleId === 'landing') {
     return (
-      <div className="bg-[#E0E5EC] text-slate-700 p-8 md:p-10 rounded-[32px] space-y-8">
+      <div className="bg-[#E0E5EC] text-slate-700 p-8 @md:p-10 rounded-[32px] space-y-8">
         {/* Soft UI Header */}
         <header className="flex items-center justify-between">
           <div className="px-5 py-2.5 rounded-2xl bg-[#E0E5EC] shadow-[6px_6px_12px_#b8bec7,-6px_-6px_12px_#ffffff] font-display font-bold text-sm text-slate-700">
@@ -448,12 +448,12 @@ export const NeumorphismExamples: React.FC<ExampleProps> = ({ exampleId }) => {
         </header>
 
         {/* Extruded Hero Card */}
-        <div className="bg-[#E0E5EC] rounded-[32px] p-8 shadow-[10px_10px_20px_#b8bec7,-10px_-10px_20px_#ffffff] grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          <div className="lg:col-span-7 space-y-4">
+        <div className="bg-[#E0E5EC] rounded-[32px] p-8 shadow-[10px_10px_20px_#b8bec7,-10px_-10px_20px_#ffffff] grid grid-cols-1 @lg:grid-cols-12 gap-8 items-center">
+          <div className="@lg:col-span-7 space-y-4">
             <div className="text-xs font-mono font-bold text-indigo-600 uppercase tracking-wider">
               AUTHENTIC NEUMORPHISM · #E0E5EC MONOCHROMATIC EXTRUSION
             </div>
-            <h1 className="font-display text-3xl md:text-4xl font-bold text-slate-700 tracking-tight leading-tight">
+            <h1 className="font-display text-3xl @md:text-4xl font-bold text-slate-700 tracking-tight leading-tight">
               Sculpted from a single continuous surface with dual light & shadow.
             </h1>
             <p className="text-xs text-slate-500 leading-relaxed">
@@ -470,7 +470,7 @@ export const NeumorphismExamples: React.FC<ExampleProps> = ({ exampleId }) => {
           </div>
 
           {/* Concentric Neumorphic Dial */}
-          <div className="lg:col-span-5 flex justify-center">
+          <div className="@lg:col-span-5 flex justify-center">
             <div className="w-48 h-48 rounded-full bg-[#E0E5EC] shadow-[10px_10px_20px_#b8bec7,-10px_-10px_20px_#ffffff] flex items-center justify-center">
               <div className="w-32 h-32 rounded-full bg-[#E0E5EC] shadow-[inset_6px_6px_12px_#b8bec7,inset_-6px_-6px_12px_#ffffff] flex flex-col items-center justify-center">
                 <span className="font-mono text-2xl font-bold text-indigo-600 tabular-nums">96 kHz</span>
@@ -485,9 +485,9 @@ export const NeumorphismExamples: React.FC<ExampleProps> = ({ exampleId }) => {
 
   if (exampleId === 'dashboard') {
     return (
-      <div className="bg-[#E0E5EC] text-slate-700 p-8 rounded-[32px] grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+      <div className="bg-[#E0E5EC] text-slate-700 p-8 rounded-[32px] grid grid-cols-1 @md:grid-cols-12 gap-8 items-center">
         {/* Left Circular Thermostat Dial */}
-        <div className="md:col-span-5 flex flex-col items-center space-y-6">
+        <div className="@md:col-span-5 flex flex-col items-center space-y-6">
           <div className="w-52 h-52 rounded-full bg-[#E0E5EC] shadow-[12px_12px_24px_#b8bec7,-12px_-12px_24px_#ffffff] flex items-center justify-center">
             <div className="w-36 h-36 rounded-full bg-[#E0E5EC] shadow-[inset_6px_6px_12px_#b8bec7,inset_-6px_-6px_12px_#ffffff] flex flex-col items-center justify-center">
               <span className="text-[11px] font-mono text-slate-400">TARGET TEMP</span>
@@ -515,7 +515,7 @@ export const NeumorphismExamples: React.FC<ExampleProps> = ({ exampleId }) => {
         </div>
 
         {/* Right Controls */}
-        <div className="md:col-span-7 space-y-6">
+        <div className="@md:col-span-7 space-y-6">
           <div className="text-xs font-bold uppercase tracking-wider text-slate-500">
             CLIMATE MODE (ACTIVE BUTTON BECOMES INSET CAVITY)
           </div>
@@ -628,12 +628,12 @@ export const ClaymorphismExamples: React.FC<ExampleProps> = ({ exampleId }) => {
           </button>
         </header>
 
-        <div className={`bg-white rounded-[32px] p-8 ${whiteClayShadow} grid grid-cols-1 lg:grid-cols-12 gap-8 items-center`}>
-          <div className="lg:col-span-7 space-y-4">
+        <div className={`bg-white rounded-[32px] p-8 ${whiteClayShadow} grid grid-cols-1 @lg:grid-cols-12 gap-8 items-center`}>
+          <div className="@lg:col-span-7 space-y-4">
             <span className="text-xs font-extrabold uppercase tracking-wider text-indigo-500">
               AUTHENTIC CLAYMORPHISM · DUAL INNER SHADOW VOLUME
             </span>
-            <h1 className="font-display text-3xl md:text-4xl font-extrabold text-slate-800 leading-tight">
+            <h1 className="font-display text-3xl @md:text-4xl font-extrabold text-slate-800 leading-tight">
               Inflated 3D toy-like surfaces crafted with pure CSS shadows.
             </h1>
             <p className="text-sm font-medium text-slate-500 leading-relaxed">
@@ -649,7 +649,7 @@ export const ClaymorphismExamples: React.FC<ExampleProps> = ({ exampleId }) => {
             </div>
           </div>
 
-          <div className="lg:col-span-5 grid grid-cols-1 gap-4">
+          <div className="@lg:col-span-5 grid grid-cols-1 gap-4">
             <div className={`rounded-[26px] p-6 font-bold ${emeraldClayCard}`}>
               <div className="text-xs uppercase opacity-75">3D CLAY BADGE</div>
               <div className="font-display text-2xl font-extrabold mt-1">Top + Bottom Inner Shadows</div>
@@ -666,7 +666,7 @@ export const ClaymorphismExamples: React.FC<ExampleProps> = ({ exampleId }) => {
 
   if (exampleId === 'dashboard') {
     return (
-      <div className="bg-[#F3F1FF] text-slate-800 p-6 md:p-8 rounded-[36px] grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="bg-[#F3F1FF] text-slate-800 p-6 @md:p-8 rounded-[36px] grid grid-cols-1 @md:grid-cols-3 gap-6">
         <div className={`rounded-[28px] p-6 ${emeraldClayCard} flex items-center justify-between`}>
           <div>
             <div className="text-xs font-bold uppercase opacity-75">DAILY STREAK</div>
@@ -700,7 +700,7 @@ export const ClaymorphismExamples: React.FC<ExampleProps> = ({ exampleId }) => {
   ];
 
   return (
-    <div className="bg-[#F3F1FF] p-6 md:p-8 rounded-[36px]">
+    <div className="bg-[#F3F1FF] p-6 @md:p-8 rounded-[36px]">
       <div className={`bg-white rounded-[32px] p-7 ${whiteClayShadow} space-y-6`}>
         <h3 className="font-display text-2xl font-extrabold text-slate-800">
           What gives Claymorphism its inflated 3D clay volume?

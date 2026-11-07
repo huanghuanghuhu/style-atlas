@@ -19,6 +19,7 @@ import {
   Eye,
   Monitor,
   Tablet,
+  Smartphone,
   LayoutGrid,
   CheckCircle2,
   XCircle,
@@ -35,7 +36,7 @@ export default function App() {
   // Example Sandbox States
   const [activeExampleTab, setActiveExampleTab] = useState<'landing' | 'dashboard' | 'interactive' | 'all-three'>('landing');
   const [sandboxViewMode, setSandboxViewMode] = useState<'preview' | 'code'>('preview');
-  const [viewportWidth, setViewportWidth] = useState<'full' | 'tablet'>('full');
+  const [viewportWidth, setViewportWidth] = useState<'full' | 'tablet' | 'mobile'>('full');
 
   // Modals
   const [showComparator, setShowComparator] = useState<boolean>(false);
@@ -499,35 +500,66 @@ export default function App() {
                   )}
                 </button>
 
-                <div className="hidden xl:flex items-center bg-[#0B0D13] p-0.5 rounded-lg border border-slate-800">
+                <div className="hidden md:flex items-center bg-[#0B0D13] p-0.5 rounded-lg border border-slate-800">
                   <button
                     onClick={() => setViewportWidth('full')}
-                    className={`px-2 py-1 rounded-md text-xs font-medium flex items-center gap-1 transition-colors cursor-pointer ${
-                      viewportWidth === 'full' ? 'bg-slate-800 text-white' : 'text-slate-400 hover:text-white'
+                    className={`px-2 py-1 rounded-md text-xs font-medium flex items-center gap-1 transition-colors cursor-pointer whitespace-nowrap ${
+                      viewportWidth === 'full' ? 'bg-indigo-600 text-white' : 'text-slate-400 hover:text-white'
                     }`}
                     title="100% 桌面视口"
                   >
                     <Monitor className="w-3.5 h-3.5" />
+                    <span className="hidden xl:inline">桌面</span>
                   </button>
                   <button
                     onClick={() => setViewportWidth('tablet')}
-                    className={`px-2 py-1 rounded-md text-xs font-medium flex items-center gap-1 transition-colors cursor-pointer ${
-                      viewportWidth === 'tablet' ? 'bg-slate-800 text-white' : 'text-slate-400 hover:text-white'
+                    className={`px-2 py-1 rounded-md text-xs font-medium flex items-center gap-1 transition-colors cursor-pointer whitespace-nowrap ${
+                      viewportWidth === 'tablet' ? 'bg-indigo-600 text-white' : 'text-slate-400 hover:text-white'
                     }`}
-                    title="780px 紧凑视口"
+                    title="768px 平板视口"
                   >
                     <Tablet className="w-3.5 h-3.5" />
+                    <span className="hidden xl:inline">平板</span>
+                  </button>
+                  <button
+                    onClick={() => setViewportWidth('mobile')}
+                    className={`px-2 py-1 rounded-md text-xs font-medium flex items-center gap-1 transition-colors cursor-pointer whitespace-nowrap ${
+                      viewportWidth === 'mobile' ? 'bg-indigo-600 text-white' : 'text-slate-400 hover:text-white'
+                    }`}
+                    title="390px 手机视口"
+                  >
+                    <Smartphone className="w-3.5 h-3.5" />
+                    <span className="hidden xl:inline">手机</span>
                   </button>
                 </div>
               </div>
             </div>
 
-            {/* Row 3: Immediate Live Viewport Frame (First-glance visual centerpiece) */}
+            {/* Row 3: Immediate Live Viewport Frame with @container responsive context */}
             <div
-              className={`mx-auto transition-all duration-200 ${
-                viewportWidth === 'tablet' ? 'max-w-[780px]' : 'w-full'
+              className={`@container mx-auto transition-all duration-300 ${
+                viewportWidth === 'mobile'
+                  ? 'max-w-[390px]'
+                  : viewportWidth === 'tablet'
+                  ? 'max-w-[768px]'
+                  : 'w-full'
               }`}
             >
+              {viewportWidth !== 'full' && (
+                <div className="mb-2 px-3 py-1 rounded-lg bg-[#12151E] border border-slate-800/90 flex items-center justify-between text-[11px] font-mono text-slate-400">
+                  <span>
+                    {viewportWidth === 'mobile'
+                      ? '390px · Mobile Viewport (@container)'
+                      : '768px · Tablet Viewport (@container)'}
+                  </span>
+                  <button
+                    onClick={() => setViewportWidth('full')}
+                    className="text-indigo-400 hover:text-indigo-300 cursor-pointer"
+                  >
+                    恢复 100% 宽屏
+                  </button>
+                </div>
+              )}
               {sandboxViewMode === 'code' ? (
                 <div className="bg-[#0D1017] border border-slate-800 rounded-2xl overflow-hidden">
                   <div className="px-5 py-3 bg-[#141822] border-b border-slate-800 flex items-center justify-between text-xs font-mono text-slate-400">

@@ -34,10 +34,10 @@ export const SwissGridExamples: React.FC<ExampleProps> = ({ exampleId }) => {
       <div className="bg-[#F7F6F2] text-[#111111] border-t border-l border-[#111111] font-sans">
         {/* Top Bar Contract: 3 zones */}
         <header className="grid grid-cols-12">
-          <div className="col-span-4 md:col-span-3 p-5 border-r border-b border-[#111111] font-display font-bold text-lg tracking-tighter flex items-center">
+          <div className="col-span-4 @md:col-span-3 p-5 border-r border-b border-[#111111] font-display font-bold text-lg tracking-tighter flex items-center">
             KRONOS.GRID
           </div>
-          <nav className="col-span-5 md:col-span-6 p-5 border-r border-b border-[#111111] hidden sm:flex items-center gap-8 text-xs font-medium">
+          <nav className="col-span-5 @md:col-span-6 p-5 border-r border-b border-[#111111] hidden @sm:flex items-center gap-8 text-xs font-medium">
             <a href="#arch" onClick={(e) => e.preventDefault()} className="hover:text-[#FF3300] transition-colors whitespace-nowrap">01. Architecture</a>
             <a href="#topo" onClick={(e) => e.preventDefault()} className="hover:text-[#FF3300] transition-colors whitespace-nowrap">02. Topology</a>
             <a href="#spec" onClick={(e) => e.preventDefault()} className="hover:text-[#FF3300] transition-colors whitespace-nowrap">03. Verification</a>
@@ -45,7 +45,7 @@ export const SwissGridExamples: React.FC<ExampleProps> = ({ exampleId }) => {
           </nav>
           <button
             onClick={() => setDeployedToast('Cluster initialization sequence queued in fra-central-1.')}
-            className="col-span-8 sm:col-span-3 p-5 border-r border-b border-[#111111] bg-[#FF3300] text-white font-mono text-xs font-bold tracking-wider uppercase hover:bg-[#111111] transition-colors flex items-center justify-between cursor-pointer"
+            className="col-span-8 @sm:col-span-3 p-5 border-r border-b border-[#111111] bg-[#FF3300] text-white font-mono text-xs font-bold tracking-wider uppercase hover:bg-[#111111] transition-colors flex items-center justify-between cursor-pointer"
           >
             <span>INITIALIZE NODE</span>
             <ArrowUpRight className="w-4 h-4" />
@@ -61,18 +61,18 @@ export const SwissGridExamples: React.FC<ExampleProps> = ({ exampleId }) => {
 
         {/* Hero Split Grid */}
         <section className="grid grid-cols-12">
-          <div className="col-span-12 lg:col-span-8 p-8 md:p-12 border-r border-b border-[#111111] flex flex-col justify-between min-h-[340px]">
+          <div className="col-span-12 @lg:col-span-8 p-8 @md:p-12 border-r border-b border-[#111111] flex flex-col justify-between min-h-[340px]">
             <div className="font-mono text-xs text-[#FF3300] font-semibold tracking-wider">
               01. DETERMINISTIC DISTRIBUTED RUNTIME · ZÜRICH EDITION
             </div>
-            <h1 className="font-display text-4xl md:text-6xl font-bold tracking-tighter leading-[0.94] my-6 max-w-2xl">
+            <h1 className="font-display text-4xl @md:text-6xl font-bold tracking-tighter leading-[0.94] my-6 max-w-2xl">
               Mathematical order for global state replication.
             </h1>
             <p className="text-sm text-neutral-700 max-w-xl leading-relaxed">
               Built on strict consensus geometry. Zero decorative layers, zero hidden queues, sub-millisecond state finality across 42 bare-metal sovereign zones.
             </p>
           </div>
-          <div className="col-span-12 lg:col-span-4 grid grid-rows-2">
+          <div className="col-span-12 @lg:col-span-4 grid grid-rows-2">
             <div className="p-8 border-r border-b border-[#111111] bg-white flex flex-col justify-between">
               <div className="flex justify-between items-start font-mono text-xs text-neutral-500">
                 <span>01.A / CONSENSUS FINALITY</span>
@@ -97,7 +97,7 @@ export const SwissGridExamples: React.FC<ExampleProps> = ({ exampleId }) => {
         </section>
 
         {/* 3-Column Swiss Architectural Matrix */}
-        <section className="grid grid-cols-1 md:grid-cols-3">
+        <section className="grid grid-cols-1 @md:grid-cols-3">
           {[
             {
               idx: '02.1',
@@ -175,7 +175,7 @@ export const SwissGridExamples: React.FC<ExampleProps> = ({ exampleId }) => {
         </div>
 
         {/* 4 KPI Cells */}
-        <div className="grid grid-cols-2 md:grid-cols-4">
+        <div className="grid grid-cols-2 @md:grid-cols-4">
           {[
             { label: '01 / ACTIVE PARTITIONS', val: '48 / 48', note: '100% QUORUM' },
             { label: '02 / GLOBAL WRITE IOPS', val: '655,790', note: '+12.4% VS 24H' },
@@ -231,7 +231,7 @@ export const SwissGridExamples: React.FC<ExampleProps> = ({ exampleId }) => {
 
   return (
     <div className="bg-[#F7F6F2] text-[#111111] border-t border-l border-[#111111] grid grid-cols-12">
-      <div className="col-span-12 lg:col-span-8 p-8 border-r border-b border-[#111111] space-y-8">
+      <div className="col-span-12 @lg:col-span-8 p-8 border-r border-b border-[#111111] space-y-8">
         <div>
           <div className="font-mono text-xs text-[#FF3300] font-bold">SPECIFICATION SHEET / FORM 03</div>
           <h2 className="font-display text-2xl font-bold tracking-tight mt-1">Dedicated Bare-Metal Cluster Allocation</h2>
@@ -240,7 +240,7 @@ export const SwissGridExamples: React.FC<ExampleProps> = ({ exampleId }) => {
         {/* Step 1 */}
         <div className="space-y-3">
           <label className="block font-mono text-xs font-bold uppercase">01. Select Compute Geometry</label>
-          <div className="grid grid-cols-3 border-t border-l border-[#111111]">
+          <div className="grid grid-cols-1 @sm:grid-cols-3 border-t border-l border-[#111111]">
             {[
               { id: 'C4-STD', cores: '16 Physical Cores', ram: '64 GB ECC', price: '$240/mo' },
               { id: 'C4-HIGH', cores: '32 Physical Cores', ram: '128 GB ECC', price: '$480/mo' },
@@ -271,7 +271,7 @@ export const SwissGridExamples: React.FC<ExampleProps> = ({ exampleId }) => {
             <span>02. NVME RAID VOLUME ALLOCATION</span>
             <span className="text-[#FF3300] tabular-nums">{storageTb} TB ($35/TB)</span>
           </div>
-          <div className="grid grid-cols-4 border-t border-l border-[#111111]">
+          <div className="grid grid-cols-2 @sm:grid-cols-4 border-t border-l border-[#111111]">
             {[2, 4, 8, 16].map((tb) => (
               <button
                 key={tb}
@@ -301,7 +301,7 @@ export const SwissGridExamples: React.FC<ExampleProps> = ({ exampleId }) => {
       </div>
 
       {/* Right Summary Column */}
-      <div className="col-span-12 lg:col-span-4 p-8 border-r border-b border-[#111111] bg-white flex flex-col justify-between">
+      <div className="col-span-12 @lg:col-span-4 p-8 border-r border-b border-[#111111] bg-white flex flex-col justify-between">
         <div className="space-y-6">
           <div className="font-mono text-xs font-bold border-b border-[#111111] pb-3">
             04. BILLING LEDGER SUMMARY
@@ -375,7 +375,7 @@ export const LinearDarkExamples: React.FC<ExampleProps> = ({ exampleId }) => {
             <Layers className="w-4 h-4 text-[#5E6AD2]" />
             <span>Veloce</span>
           </div>
-          <nav className="hidden sm:flex items-center gap-6 text-xs text-[#8A8F98]">
+          <nav className="hidden @sm:flex items-center gap-6 text-xs text-[#8A8F98]">
             <a href="#method" onClick={(e) => e.preventDefault()} className="hover:text-white transition-colors">Method</a>
             <a href="#changelog" onClick={(e) => e.preventDefault()} className="hover:text-white transition-colors">Changelog</a>
             <a href="#security" onClick={(e) => e.preventDefault()} className="hover:text-white transition-colors">Security</a>
@@ -391,7 +391,7 @@ export const LinearDarkExamples: React.FC<ExampleProps> = ({ exampleId }) => {
           <div className="text-xs font-mono text-[#8A8F98] mb-4">
             RELEASE 2026.4 · NATIVE KEYBOARD GRAPH ENGINE
           </div>
-          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-white leading-[1.12]">
+          <h1 className="text-4xl @md:text-5xl font-semibold tracking-tight text-white leading-[1.12]">
             Crafted for high-velocity engineering teams.
           </h1>
           <p className="text-sm text-[#8A8F98] mt-4 max-w-xl mx-auto leading-relaxed">
@@ -409,7 +409,7 @@ export const LinearDarkExamples: React.FC<ExampleProps> = ({ exampleId }) => {
         </section>
 
         {/* Interactive Craft Showcase Cards */}
-        <section className="px-8 pb-10 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <section className="px-8 pb-10 grid grid-cols-1 @md:grid-cols-3 gap-4">
           {features.map((f, i) => (
             <button
               key={f.title}
@@ -449,7 +449,7 @@ export const LinearDarkExamples: React.FC<ExampleProps> = ({ exampleId }) => {
     return (
       <div className="bg-[#090A0F] text-slate-200 rounded-2xl border border-white/[0.08] overflow-hidden grid grid-cols-12 min-h-[420px]">
         {/* Left Issue List */}
-        <div className="col-span-12 lg:col-span-8 border-r border-white/[0.08] flex flex-col justify-between">
+        <div className="col-span-12 @lg:col-span-8 border-r border-white/[0.08] flex flex-col justify-between">
           <div>
             {/* Toolbar */}
             <div className="px-4 py-3 bg-[#12141C] border-b border-white/[0.08] flex flex-wrap items-center justify-between gap-2">
@@ -505,7 +505,7 @@ export const LinearDarkExamples: React.FC<ExampleProps> = ({ exampleId }) => {
         </div>
 
         {/* Right Inspector Panel */}
-        <div className="col-span-12 lg:col-span-4 bg-[#12141C] p-5 flex flex-col justify-between">
+        <div className="col-span-12 @lg:col-span-4 bg-[#12141C] p-5 flex flex-col justify-between">
           {currentIssue && (
             <div className="space-y-5">
               <div className="flex items-center justify-between border-b border-white/[0.08] pb-3">
@@ -559,7 +559,7 @@ export const LinearDarkExamples: React.FC<ExampleProps> = ({ exampleId }) => {
   ].filter((c) => c.label.toLowerCase().includes(cmdQuery.toLowerCase()));
 
   return (
-    <div className="bg-[#090A0F] p-6 md:p-10 rounded-2xl border border-white/[0.08]">
+    <div className="bg-[#090A0F] p-6 @md:p-10 rounded-2xl border border-white/[0.08]">
       <div className="max-w-xl mx-auto bg-[#12141C] border border-white/[0.12] rounded-xl shadow-[0_20px_60px_rgba(0,0,0,0.6),inset_0_1px_0_0_rgba(255,255,255,0.1)] overflow-hidden">
         {/* Search Input */}
         <div className="flex items-center px-4 py-3.5 border-b border-white/[0.08] gap-3">
@@ -638,9 +638,9 @@ export const BentoModularExamples: React.FC<ExampleProps> = ({ exampleId }) => {
         </header>
 
         {/* 4-Column Asymmetric Bento Matrix */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 @md:grid-cols-4 gap-4">
           {/* 2x1 Hero Cell */}
-          <div className="md:col-span-2 bg-white rounded-3xl p-7 border border-black/[0.06] shadow-[0_2px_10px_rgba(0,0,0,0.03)] flex flex-col justify-between min-h-[220px]">
+          <div className="@md:col-span-2 bg-white rounded-3xl p-7 border border-black/[0.06] shadow-[0_2px_10px_rgba(0,0,0,0.03)] flex flex-col justify-between min-h-[220px]">
             <div className="flex items-center justify-between">
               <span className="text-xs font-semibold text-[#0071E3]">UNIFIED SILICON ARCHITECTURE</span>
               <Cpu className="w-4 h-4 text-[#86868B]" />
@@ -685,7 +685,7 @@ export const BentoModularExamples: React.FC<ExampleProps> = ({ exampleId }) => {
             </div>
           </div>
 
-          <div className="md:col-span-3 bg-white rounded-3xl p-7 border border-black/[0.06] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+          <div className="@md:col-span-3 bg-white rounded-3xl p-7 border border-black/[0.06] flex flex-col @sm:flex-row items-start @sm:items-center justify-between gap-6">
             <div>
               <span className="text-xs font-semibold text-[#86868B]">LIQUID XDR DISPLAY</span>
               <h3 className="font-display text-2xl font-semibold text-[#1D1D1F] mt-1">
@@ -710,9 +710,9 @@ export const BentoModularExamples: React.FC<ExampleProps> = ({ exampleId }) => {
 
   if (exampleId === 'dashboard') {
     return (
-      <div className="bg-[#F5F5F7] text-[#1D1D1F] p-6 rounded-[32px] grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="bg-[#F5F5F7] text-[#1D1D1F] p-6 rounded-[32px] grid grid-cols-1 @md:grid-cols-3 gap-4">
         {/* Card 1: Climate & Lighting */}
-        <div className="md:col-span-2 bg-white rounded-3xl p-6 border border-black/[0.06] flex flex-col justify-between">
+        <div className="@md:col-span-2 bg-white rounded-3xl p-6 border border-black/[0.06] flex flex-col justify-between">
           <div className="flex items-center justify-between">
             <div>
               <span className="text-xs text-[#86868B] font-medium">STUDIO ENVIRONMENT</span>
@@ -772,12 +772,12 @@ export const BentoModularExamples: React.FC<ExampleProps> = ({ exampleId }) => {
   const total = 2499 + ramPrice[selectedRam] + ssdPrice[selectedSsd];
 
   return (
-    <div className="bg-[#F5F5F7] text-[#1D1D1F] p-6 rounded-[32px] grid grid-cols-1 md:grid-cols-12 gap-4">
-      <div className="md:col-span-8 space-y-4">
+    <div className="bg-[#F5F5F7] text-[#1D1D1F] p-6 rounded-[32px] grid grid-cols-1 @md:grid-cols-12 gap-4">
+      <div className="@md:col-span-8 space-y-4">
         <div className="bg-white rounded-3xl p-6 border border-black/[0.06]">
           <h3 className="font-display text-base font-semibold">1. Select Unified Memory</h3>
           <p className="text-xs text-[#86868B] mt-1">More unified memory allows larger 3D scenes and local LLM weights in VRAM.</p>
-          <div className="grid grid-cols-3 gap-3 mt-4">
+          <div className="grid grid-cols-1 @sm:grid-cols-3 gap-3 mt-4">
             {(['36GB', '64GB', '128GB'] as const).map((r) => (
               <button
                 key={r}
@@ -797,7 +797,7 @@ export const BentoModularExamples: React.FC<ExampleProps> = ({ exampleId }) => {
 
         <div className="bg-white rounded-3xl p-6 border border-black/[0.06]">
           <h3 className="font-display text-base font-semibold">2. Select PCIe Gen5 SSD Storage</h3>
-          <div className="grid grid-cols-3 gap-3 mt-4">
+          <div className="grid grid-cols-1 @sm:grid-cols-3 gap-3 mt-4">
             {(['1TB', '2TB', '4TB'] as const).map((s) => (
               <button
                 key={s}
@@ -817,7 +817,7 @@ export const BentoModularExamples: React.FC<ExampleProps> = ({ exampleId }) => {
       </div>
 
       {/* Summary Bento Box */}
-      <div className="md:col-span-4 bg-[#1D1D1F] text-white rounded-3xl p-7 flex flex-col justify-between">
+      <div className="@md:col-span-4 bg-[#1D1D1F] text-white rounded-3xl p-7 flex flex-col justify-between">
         <div>
           <span className="text-xs text-[#86868B]">YOUR CONFIGURATION</span>
           <h3 className="font-display text-2xl font-semibold mt-2">StudioBook 16 M4 Max</h3>
@@ -860,13 +860,13 @@ export const ShadcnZincExamples: React.FC<ExampleProps> = ({ exampleId }) => {
 
   if (exampleId === 'landing') {
     return (
-      <div className="bg-white text-zinc-950 p-6 md:p-8 rounded-xl border border-zinc-200 shadow-2xs space-y-8">
+      <div className="bg-white text-zinc-950 p-6 @md:p-8 rounded-xl border border-zinc-200 shadow-2xs space-y-8">
         <header className="flex items-center justify-between border-b border-zinc-200 pb-4">
           <div className="flex items-center gap-6">
             <span className="font-sans font-bold text-sm tracking-tight text-zinc-950">
               acme/ui
             </span>
-            <nav className="hidden sm:flex gap-5 text-xs font-medium text-zinc-500">
+            <nav className="hidden @sm:flex gap-5 text-xs font-medium text-zinc-500">
               <a href="#docs" onClick={(e) => e.preventDefault()} className="text-zinc-950">Docs</a>
               <a href="#components" onClick={(e) => e.preventDefault()} className="hover:text-zinc-950">Components</a>
               <a href="#blocks" onClick={(e) => e.preventDefault()} className="hover:text-zinc-950">Blocks</a>
@@ -883,13 +883,13 @@ export const ShadcnZincExamples: React.FC<ExampleProps> = ({ exampleId }) => {
           </div>
         </header>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          <div className="lg:col-span-6 space-y-4">
+        <div className="grid grid-cols-1 @lg:grid-cols-12 gap-8 items-center">
+          <div className="@lg:col-span-6 space-y-4">
             <div className="inline-flex items-center gap-2 text-xs font-medium text-zinc-600 border-b border-zinc-200 pb-1">
               <span>New · Tailwind v4 & React 19 Registry</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-zinc-950 leading-[1.12]">
+            <h1 className="text-3xl @md:text-4xl font-bold tracking-tight text-zinc-950 leading-[1.12]">
               Build your component library with crisp Zinc primitives.
             </h1>
             <p className="text-sm text-zinc-500 leading-relaxed">
@@ -906,7 +906,7 @@ export const ShadcnZincExamples: React.FC<ExampleProps> = ({ exampleId }) => {
           </div>
 
           {/* Interactive Tabs Slot Card */}
-          <div className="lg:col-span-6 rounded-xl border border-zinc-200 bg-white p-5 shadow-2xs space-y-4">
+          <div className="@lg:col-span-6 rounded-xl border border-zinc-200 bg-white p-5 shadow-2xs space-y-4">
             <div className="flex items-center justify-between">
               <div className="inline-flex h-8 items-center rounded-lg bg-zinc-100 p-1 text-zinc-500 text-xs">
                 {(['preview', 'code', 'cli'] as const).map((tab) => (
@@ -973,7 +973,7 @@ export const ShadcnZincExamples: React.FC<ExampleProps> = ({ exampleId }) => {
 
     return (
       <div className="bg-white text-zinc-950 p-6 rounded-xl border border-zinc-200 shadow-2xs space-y-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 @md:grid-cols-3 gap-4">
           {[
             { label: 'Net Revenue', val: '$45,231.89', delta: '+20.1% from last month' },
             { label: 'Active Subscriptions', val: '+2,350', delta: '+180.1% from last month' },
@@ -1057,7 +1057,7 @@ export const ShadcnZincExamples: React.FC<ExampleProps> = ({ exampleId }) => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 @md:grid-cols-2 gap-6">
         <div className="space-y-4">
           <div className="space-y-1.5">
             <label className="text-xs font-medium text-zinc-900">Token Identifier</label>
@@ -1121,7 +1121,7 @@ export const FluentAcrylicExamples: React.FC<ExampleProps> = ({ exampleId }) => 
 
   if (exampleId === 'landing') {
     return (
-      <div className="bg-gradient-to-br from-[#E6EFFA] via-[#F2F6FC] to-[#E2ECFA] p-6 md:p-8 rounded-2xl border border-white/80 space-y-6 text-[#1B1A19]">
+      <div className="bg-gradient-to-br from-[#E6EFFA] via-[#F2F6FC] to-[#E2ECFA] p-6 @md:p-8 rounded-2xl border border-white/80 space-y-6 text-[#1B1A19]">
         {/* Acrylic Top Navigation Bar */}
         <header className="bg-white/75 backdrop-blur-xl border border-white/90 rounded-xl px-5 py-3 flex flex-wrap items-center justify-between gap-4 shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
           <div className="flex items-center gap-3">
@@ -1149,8 +1149,8 @@ export const FluentAcrylicExamples: React.FC<ExampleProps> = ({ exampleId }) => 
         </header>
 
         {/* Translucent Acrylic Hero Surface */}
-        <div className="bg-white/75 backdrop-blur-xl border border-white/90 rounded-2xl p-7 shadow-[0_8px_28px_rgba(0,103,192,0.08)] grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-          <div className="lg:col-span-7 space-y-3">
+        <div className="bg-white/75 backdrop-blur-xl border border-white/90 rounded-2xl p-7 shadow-[0_8px_28px_rgba(0,103,192,0.08)] grid grid-cols-1 @lg:grid-cols-12 gap-6 items-center">
+          <div className="@lg:col-span-7 space-y-3">
             <div className="text-xs font-semibold text-[#0067C0]">
               MICA & ACRYLIC MATERIAL SYSTEM · {fluentApp.toUpperCase()} ENGINE
             </div>
@@ -1170,7 +1170,7 @@ export const FluentAcrylicExamples: React.FC<ExampleProps> = ({ exampleId }) => 
             </div>
           </div>
 
-          <div className="lg:col-span-5 bg-white/90 border border-white rounded-xl p-5 shadow-xs space-y-3">
+          <div className="@lg:col-span-5 bg-white/90 border border-white rounded-xl p-5 shadow-xs space-y-3">
             <div className="text-xs font-semibold text-[#1B1A19]">Quick Command Input (WinUI TextBox)</div>
             <input
               type="text"
@@ -1190,9 +1190,9 @@ export const FluentAcrylicExamples: React.FC<ExampleProps> = ({ exampleId }) => 
 
   if (exampleId === 'dashboard') {
     return (
-      <div className="bg-gradient-to-br from-[#E6EFFA] via-[#F3F6FC] to-[#E2ECFA] p-5 rounded-2xl border border-white/80 grid grid-cols-1 md:grid-cols-12 gap-5 text-[#1B1A19]">
+      <div className="bg-gradient-to-br from-[#E6EFFA] via-[#F3F6FC] to-[#E2ECFA] p-5 rounded-2xl border border-white/80 grid grid-cols-1 @md:grid-cols-12 gap-5 text-[#1B1A19]">
         {/* Left Acrylic Navigation Rail with Left Vertical Pill Indicator */}
-        <aside className="md:col-span-4 lg:col-span-3 bg-white/70 backdrop-blur-xl border border-white/80 rounded-xl p-3 space-y-1 shadow-[0_4px_16px_rgba(0,0,0,0.04)]">
+        <aside className="@md:col-span-4 @lg:col-span-3 bg-white/70 backdrop-blur-xl border border-white/80 rounded-xl p-3 space-y-1 shadow-[0_4px_16px_rgba(0,0,0,0.04)]">
           <div className="px-3 py-2 text-xs font-semibold text-[#605E5C]">OneDrive Enterprise</div>
           {(['Home', 'Shared', 'Cloud', 'Security'] as const).map((nav) => {
             const active = activeNav === nav;
@@ -1216,7 +1216,7 @@ export const FluentAcrylicExamples: React.FC<ExampleProps> = ({ exampleId }) => 
         </aside>
 
         {/* Right Content Area */}
-        <div className="md:col-span-8 lg:col-span-9 bg-white/85 backdrop-blur-md border border-white/90 rounded-xl p-5 space-y-4 shadow-[0_4px_16px_rgba(0,0,0,0.04)]">
+        <div className="@md:col-span-8 @lg:col-span-9 bg-white/85 backdrop-blur-md border border-white/90 rounded-xl p-5 space-y-4 shadow-[0_4px_16px_rgba(0,0,0,0.04)]">
           <div className="flex items-center justify-between">
             <h3 className="text-base font-semibold">{activeNav} Workspace Files</h3>
             <span className="text-xs text-[#0067C0] font-semibold">1.24 TB of 2.0 TB Used</span>
@@ -1226,7 +1226,7 @@ export const FluentAcrylicExamples: React.FC<ExampleProps> = ({ exampleId }) => 
             <div className="h-full w-3/5 bg-[#0067C0] rounded-full" />
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+          <div className="grid grid-cols-1 @sm:grid-cols-2 gap-3 pt-1">
             {[
               { name: 'Fluent_2_Design_Tokens.loop', meta: 'Edited 14 mins ago · Shared' },
               { name: 'Azure_Kubernetes_Topology.vsdx', meta: 'Edited 2 hrs ago · Verified' },

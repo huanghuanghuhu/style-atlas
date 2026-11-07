@@ -61,15 +61,15 @@ export const IndustrialHardwareExamples: React.FC<ExampleProps> = ({ exampleId }
           </div>
 
           {/* Recessed Curved Glass Dual VU Display with Specular Reflection */}
-          <div className="relative overflow-hidden bg-[#0c120e] border-2 border-[#2a3038] rounded-xl p-6 text-white font-mono shadow-[inset_0_6px_16px_rgba(0,0,0,0.95),0_1px_0_rgba(255,255,255,0.75)] grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+          <div className="relative overflow-hidden bg-[#0c120e] border-2 border-[#2a3038] rounded-xl p-6 text-white font-mono shadow-[inset_0_6px_16px_rgba(0,0,0,0.95),0_1px_0_rgba(255,255,255,0.75)] grid grid-cols-1 @md:grid-cols-12 gap-6 items-center">
             {/* Glossy Curved Glass Reflection Overlay */}
             <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/22 via-white/5 to-transparent pointer-events-none" />
 
-            <div className="md:col-span-7 space-y-2 relative z-10">
+            <div className="@md:col-span-7 space-y-2 relative z-10">
               <div className="text-[11px] text-amber-400 font-bold tracking-wider">
                 OPTICAL ATTENUATOR // {powerOn ? 'ACTIVE VACUUM STAGE' : 'TRUE HARDWARE BYPASS'}
               </div>
-              <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-amber-50 drop-shadow-[0_0_10px_rgba(245,158,11,0.35)]">
+              <h1 className="text-2xl @md:text-3xl font-bold tracking-tight text-amber-50 drop-shadow-[0_0_10px_rgba(245,158,11,0.35)]">
                 Authentic Brushed Metal & Glass Skeuomorphism.
               </h1>
               <p className="text-xs text-emerald-300/80 leading-relaxed">
@@ -77,7 +77,7 @@ export const IndustrialHardwareExamples: React.FC<ExampleProps> = ({ exampleId }
               </p>
             </div>
 
-            <div className="md:col-span-5 grid grid-cols-2 gap-3 border-l border-neutral-800 pl-6 relative z-10">
+            <div className="@md:col-span-5 grid grid-cols-2 gap-3 border-l border-neutral-800 pl-6 relative z-10">
               <div className="bg-[#141d17] border border-amber-500/30 rounded-lg p-3 shadow-inner">
                 <div className="text-[10px] text-amber-300/70">VU GAIN REDUCTION</div>
                 <div className="text-2xl font-bold text-amber-400 tabular-nums mt-1">
@@ -101,7 +101,7 @@ export const IndustrialHardwareExamples: React.FC<ExampleProps> = ({ exampleId }
           </div>
 
           {/* 3 Realistic 3D Conic-Gradient Metallic Rotary Knobs */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-1">
+          <div className="grid grid-cols-1 @sm:grid-cols-3 gap-4 pt-1">
             {[
               {
                 label: 'INPUT GAIN (STEPPED)',
@@ -186,7 +186,7 @@ export const IndustrialHardwareExamples: React.FC<ExampleProps> = ({ exampleId }
         </div>
 
         {/* 3 Glossy Glass Instrument Gauges */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 @md:grid-cols-3 gap-4">
           {[
             {
               title: 'BAROMETRIC PRESSURE',
@@ -232,8 +232,8 @@ export const IndustrialHardwareExamples: React.FC<ExampleProps> = ({ exampleId }
 
   // Interactive Reel-to-Reel Tape Transport & 5-Band Metallic Graphic EQ
   return (
-    <div className="bg-[linear-gradient(180deg,#e6e8ec_0%,#c8ccd4_48%,#b4b9c4_50%,#dcdfe6_100%)] border-2 border-[#7c828e] rounded-2xl p-6 text-neutral-900 grid grid-cols-1 md:grid-cols-12 gap-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.9),0_12px_24px_rgba(0,0,0,0.3)]">
-      <div className="md:col-span-7 space-y-4">
+    <div className="bg-[linear-gradient(180deg,#e6e8ec_0%,#c8ccd4_48%,#b4b9c4_50%,#dcdfe6_100%)] border-2 border-[#7c828e] rounded-2xl p-6 text-neutral-900 grid grid-cols-1 @md:grid-cols-12 gap-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.9),0_12px_24px_rgba(0,0,0,0.3)]">
+      <div className="@md:col-span-7 space-y-4">
         <div className="font-sans text-xs font-extrabold uppercase tracking-wider text-neutral-800 drop-shadow-[0_1px_0_rgba(255,255,255,0.85)]">
           5-BAND ANALOG GRAPHIC EQUALIZER (CLICK FADERS)
         </div>
@@ -266,7 +266,7 @@ export const IndustrialHardwareExamples: React.FC<ExampleProps> = ({ exampleId }
       </div>
 
       {/* Chrome Transport Piano Keys & Recessed Tape Counter */}
-      <div className="md:col-span-5 flex flex-col justify-between bg-[linear-gradient(180deg,#cfd4de_0%,#aeb5c2_100%)] border border-neutral-500 rounded-xl p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)]">
+      <div className="@md:col-span-5 flex flex-col justify-between bg-[linear-gradient(180deg,#cfd4de_0%,#aeb5c2_100%)] border border-neutral-500 rounded-xl p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)]">
         <div className="space-y-3">
           <div className="flex items-center justify-between">
             <span className="font-sans text-xs font-extrabold text-neutral-800 drop-shadow-[0_1px_0_#fff]">
@@ -343,7 +343,7 @@ export const RetroTerminalExamples: React.FC<ExampleProps> = ({ exampleId }) => 
 
         <div className="space-y-3">
           <div className="text-xs text-amber-400">SYSTEM DESCRIPTION:</div>
-          <h1 className="text-2xl md:text-3xl font-bold text-emerald-300 leading-snug">
+          <h1 className="text-2xl @md:text-3xl font-bold text-emerald-300 leading-snug">
             Zero-dependency container supervisor written in pure Rust & eBPF.
           </h1>
           <p className="text-xs text-emerald-400/75 max-w-2xl leading-relaxed">
@@ -382,7 +382,7 @@ export const RetroTerminalExamples: React.FC<ExampleProps> = ({ exampleId }) => 
 
   if (exampleId === 'dashboard') {
     return (
-      <div className="bg-[#060B08] text-emerald-400 font-mono p-5 border border-emerald-500/40 grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+      <div className="bg-[#060B08] text-emerald-400 font-mono p-5 border border-emerald-500/40 grid grid-cols-1 @md:grid-cols-2 gap-4 text-xs">
         <div className="bg-[#0B140E] border border-emerald-500/40 p-4 space-y-3">
           <div className="bg-emerald-400 text-[#060B08] px-2 py-0.5 font-bold inline-block">
             CPU CORE UTILIZATION [8 THREADS]
@@ -429,7 +429,7 @@ export const RetroTerminalExamples: React.FC<ExampleProps> = ({ exampleId }) => 
 
   // Interactive CLI Firewall Policy Builder
   return (
-    <div className="bg-[#060B08] text-emerald-400 font-mono p-6 border border-emerald-500/40 grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
+    <div className="bg-[#060B08] text-emerald-400 font-mono p-6 border border-emerald-500/40 grid grid-cols-1 @md:grid-cols-2 gap-6 text-xs">
       <div className="space-y-3">
         <div className="text-amber-400 font-bold">SELECT INBOUND PORTS TO PERMIT (CLICK TO TOGGLE):</div>
         <div className="space-y-2">
@@ -491,9 +491,9 @@ export const Win95RetroExamples: React.FC<ExampleProps> = ({ exampleId }) => {
   if (exampleId === 'landing') {
     return (
       <div className="bg-[#008080] p-5 text-black font-sans space-y-5 border-2 border-black">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
+        <div className="grid grid-cols-1 @lg:grid-cols-12 gap-5 items-start">
           {/* Main Welcome Window */}
-          <div className="lg:col-span-7 bg-[#C0C0C0] border-2 border-t-white border-l-white border-r-[#404040] border-b-[#404040] p-1 shadow-[3px_3px_0_rgba(0,0,0,0.45)]">
+          <div className="@lg:col-span-7 bg-[#C0C0C0] border-2 border-t-white border-l-white border-r-[#404040] border-b-[#404040] p-1 shadow-[3px_3px_0_rgba(0,0,0,0.45)]">
             {/* Classic Navy Gradient Title Bar */}
             <div className="bg-[linear-gradient(90deg,#000080_0%,#1084d0_100%)] text-white px-2 py-1 flex items-center justify-between text-xs font-bold">
               <span>Welcome_to_Poolsuite_OS_95.exe</span>
@@ -546,7 +546,7 @@ export const Win95RetroExamples: React.FC<ExampleProps> = ({ exampleId }) => {
           </div>
 
           {/* Secondary Media Player Window */}
-          <div className="lg:col-span-5 bg-[#C0C0C0] border-2 border-t-white border-l-white border-r-[#404040] border-b-[#404040] p-1 shadow-[3px_3px_0_rgba(0,0,0,0.45)]">
+          <div className="@lg:col-span-5 bg-[#C0C0C0] border-2 border-t-white border-l-white border-r-[#404040] border-b-[#404040] p-1 shadow-[3px_3px_0_rgba(0,0,0,0.45)]">
             <div className="bg-[linear-gradient(90deg,#000080_0%,#1084d0_100%)] text-white px-2 py-1 flex items-center justify-between text-xs font-bold">
               <span>CD_Player_Deluxe.exe</span>
               <span>[X]</span>
@@ -607,9 +607,9 @@ export const Win95RetroExamples: React.FC<ExampleProps> = ({ exampleId }) => {
             <span>[ _ ] [ □ ] [ X ]</span>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-2 p-2">
+          <div className="grid grid-cols-1 @md:grid-cols-12 gap-2 p-2">
             {/* Sunken Left Directory Tree */}
-            <div className="md:col-span-4 bg-white border-2 border-t-[#808080] border-l-[#808080] border-r-white border-b-white p-2 space-y-1 text-xs">
+            <div className="@md:col-span-4 bg-white border-2 border-t-[#808080] border-l-[#808080] border-r-white border-b-white p-2 space-y-1 text-xs">
               <div className="font-bold text-neutral-600 pb-1">Folders</div>
               {['Poolsuite_Mixes', 'System32_Drivers', 'Bitmap_Icons', 'Readme_Docs'].map((folder) => (
                 <button
@@ -626,8 +626,8 @@ export const Win95RetroExamples: React.FC<ExampleProps> = ({ exampleId }) => {
             </div>
 
             {/* Sunken Right File Grid & Disk Defrag Cluster Map */}
-            <div className="md:col-span-8 bg-white border-2 border-t-[#808080] border-l-[#808080] border-r-white border-b-white p-3 space-y-4 text-xs">
-              <div className="grid grid-cols-3 gap-2">
+            <div className="@md:col-span-8 bg-white border-2 border-t-[#808080] border-l-[#808080] border-r-white border-b-white p-3 space-y-4 text-xs">
+              <div className="grid grid-cols-1 @sm:grid-cols-3 gap-2">
                 {[
                   { name: 'AUTOEXEC.BAT', size: '2 KB', type: 'MS-DOS Batch' },
                   { name: 'SYNTH_WAVE.WAV', size: '14,280 KB', type: 'PCM Audio' },
@@ -682,9 +682,9 @@ export const Win95RetroExamples: React.FC<ExampleProps> = ({ exampleId }) => {
           <span>[X]</span>
         </div>
 
-        <div className="p-4 grid grid-cols-1 md:grid-cols-12 gap-4">
+        <div className="p-4 grid grid-cols-1 @md:grid-cols-12 gap-4">
           {/* Left Retro Banner Column */}
-          <div className="md:col-span-4 bg-[#000080] text-white p-4 border-2 border-t-[#808080] border-l-[#808080] border-r-white border-b-white flex flex-col justify-between">
+          <div className="@md:col-span-4 bg-[#000080] text-white p-4 border-2 border-t-[#808080] border-l-[#808080] border-r-white border-b-white flex flex-col justify-between">
             <div className="font-mono text-xs font-bold text-cyan-300">SETUP // 95</div>
             <div className="text-lg font-extrabold leading-tight my-4">
               Retro GUI Component Pack
@@ -693,7 +693,7 @@ export const Win95RetroExamples: React.FC<ExampleProps> = ({ exampleId }) => {
           </div>
 
           {/* Right Wizard Controls */}
-          <div className="md:col-span-8 space-y-3 text-xs flex flex-col justify-between">
+          <div className="@md:col-span-8 space-y-3 text-xs flex flex-col justify-between">
             <div className="space-y-2">
               <div className="font-bold text-sm">
                 {wizardStep === 1 ? 'Select Optional System Components:' : 'Ready to Copy System Files'}
@@ -787,12 +787,12 @@ export const CyberpunkHudExamples: React.FC<ExampleProps> = ({ exampleId }) => {
         </header>
 
         {/* 45-Degree Chamfered Hero Armor Card */}
-        <div className="bg-[#0E131F] border border-[#00F0FF]/50 p-7 [clip-path:polygon(0_0,calc(100%-22px)_0,100%_22px,100%_100%,22px_100%,0_calc(100%-22px))] grid grid-cols-1 lg:grid-cols-12 gap-6 items-center shadow-[0_0_25px_rgba(0,240,255,0.12)]">
-          <div className="lg:col-span-7 space-y-3">
+        <div className="bg-[#0E131F] border border-[#00F0FF]/50 p-7 [clip-path:polygon(0_0,calc(100%-22px)_0,100%_22px,100%_100%,22px_100%,0_calc(100%-22px))] grid grid-cols-1 @lg:grid-cols-12 gap-6 items-center shadow-[0_0_25px_rgba(0,240,255,0.12)]">
+          <div className="@lg:col-span-7 space-y-3">
             <div className="font-mono text-xs text-[#FCEE0A] font-bold tracking-widest">
               NEURAL INTERFACE // MODE: {combatMode}
             </div>
-            <h1 className="font-display text-3xl md:text-4xl font-extrabold uppercase tracking-wide text-white">
+            <h1 className="font-display text-3xl @md:text-4xl font-extrabold uppercase tracking-wide text-white">
               Chamfered Tactical Cyberware Architecture.
             </h1>
             <p className="text-xs text-slate-300 leading-relaxed">
@@ -808,7 +808,7 @@ export const CyberpunkHudExamples: React.FC<ExampleProps> = ({ exampleId }) => {
             </div>
           </div>
 
-          <div className="lg:col-span-5 bg-[#07090E] border border-[#00F0FF]/40 p-5 font-mono space-y-3">
+          <div className="@lg:col-span-5 bg-[#07090E] border border-[#00F0FF]/40 p-5 font-mono space-y-3">
             <div className="flex justify-between text-[11px] text-[#00F0FF]">
               <span>OPTICAL SCANNER</span>
               <span>TARGET LOCKED</span>
@@ -845,7 +845,7 @@ export const CyberpunkHudExamples: React.FC<ExampleProps> = ({ exampleId }) => {
           </button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 @md:grid-cols-3 gap-4">
           {[
             {
               label: 'NEURAL SYNC RATIO',
@@ -891,8 +891,8 @@ export const CyberpunkHudExamples: React.FC<ExampleProps> = ({ exampleId }) => {
     .reduce((acc, m) => acc + m.cost, 0);
 
   return (
-    <div className="bg-[#07090E] text-white p-6 border border-[#00F0FF]/40 font-mono grid grid-cols-1 md:grid-cols-12 gap-6">
-      <div className="md:col-span-7 space-y-3">
+    <div className="bg-[#07090E] text-white p-6 border border-[#00F0FF]/40 font-mono grid grid-cols-1 @md:grid-cols-12 gap-6">
+      <div className="@md:col-span-7 space-y-3">
         <div className="text-xs text-[#FCEE0A] font-bold">
           CLICK CHASSIS SLOTS TO MOUNT / UNMOUNT CYBERWARE:
         </div>
@@ -920,7 +920,7 @@ export const CyberpunkHudExamples: React.FC<ExampleProps> = ({ exampleId }) => {
         })}
       </div>
 
-      <div className="md:col-span-5 bg-[#0E131F] border border-[#00F0FF]/50 p-5 flex flex-col justify-between [clip-path:polygon(0_0,calc(100%-16px)_0,100%_16px,100%_100%,16px_100%,0_calc(100%-16px))]">
+      <div className="@md:col-span-5 bg-[#0E131F] border border-[#00F0FF]/50 p-5 flex flex-col justify-between [clip-path:polygon(0_0,calc(100%-16px)_0,100%_16px,100%_100%,16px_100%,0_calc(100%-16px))]">
         <div className="space-y-3">
           <div className="text-xs text-[#00F0FF] font-bold">NEURAL CAPACITY GAUGE</div>
           <div className="text-3xl font-extrabold text-[#FCEE0A] tabular-nums">
